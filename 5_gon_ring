@@ -1,0 +1,20 @@
+# first, I have to create groups of three: Done
+# now I need to compare sets of three such that every number from 1-10 is used.
+list_of_threes = list()
+for i in range(1, 11):
+    for j in range(1, 11):
+        for k in range(1, 11):
+            if i != j and j != k and i != k:
+                set_of_three = [i, j, k]
+                list_of_threes.append(set_of_three)
+            else:
+                pass
+# this is my attempt at paring down the list of sets of three to only those where
+reduced_list_of_threes = list()
+for j in range(15, 21):
+    for i in list_of_threes:
+        if sum(i) is j:
+            reduced_list_of_threes.append(i)
+        else:
+            pass
+
